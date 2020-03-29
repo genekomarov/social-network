@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+body {
+    font-family: Roboto, sans-serif;
+}
+
 .app-wrapper {
     display: grid;
     width: 980px;
@@ -9,4 +15,15 @@
     grid-template-areas:
     'h h h'
     'n c c';
+}
+
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+h2 {
+    font-size: 1.2rem;
+    font-weight: normal;
 }

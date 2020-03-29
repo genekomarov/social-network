@@ -1,0 +1,11 @@
+.avatar__img {
+    object-fit: cover;
+    width: 100px;
+    height: 100px;
+    float: left;
+    margin-right: 10px;
+}
+
+.name {
+    margin-bottom: 10px;
+}

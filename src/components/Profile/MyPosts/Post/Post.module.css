@@ -1,0 +1,16 @@
+.ava {
+    object-fit: cover;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    float: left;
+    margin-right: 10px;
+}
+
+.post {
+    overflow: hidden;
+}
+
+.wrapper {
+    margin: 15px 0;
+}
