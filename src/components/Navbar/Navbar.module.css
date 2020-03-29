@@ -1,0 +1,24 @@
+.nav {
+    grid-area: n;
+    background-color: azure;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+li {
+    list-style-type: none;
+    margin: 10px 0;
+}
+
+ul {
+    margin: 10px 15px;
+    padding: 0;
+}
+
+.active a {
+    color: teal;
+    font-weight: bold;
+}

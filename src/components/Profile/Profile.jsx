@@ -1,17 +1,18 @@
 import React from 'react';
+import s from './Profile.module.css';
 
 const Prorfile = () => {
     return (
-        <main className='content'>
-            <div className='unclear-block'>
-                <img className='unclear-block__img' src="https://s1.1zoom.me/big0/930/Coast_Sunrises_and_sunsets_Waves_USA_Ocean_Kaneohe_521540_1280x775.jpg" alt=""/>
+        <main className={s.content}>
+            <div>
+                <img className={s.unclearBlock__img} src="https://s1.1zoom.me/big0/930/Coast_Sunrises_and_sunsets_Waves_USA_Ocean_Kaneohe_521540_1280x775.jpg" alt=""/>
             </div>
-            <div className='user-presentation'>
+            <div>
                 avatar + description
             </div>
-            <div className='posts'>
+            <div>
                 my posts
-                <div className='new-post'>
+                <div>
                     new post
                 </div>
                 <ul>

@@ -1,0 +1,9 @@
+.header {
+    grid-area: h;
+    background-color: lightblue;
+    text-align: center;
+}
+
+.logo {
+    height: 100%;
+}
