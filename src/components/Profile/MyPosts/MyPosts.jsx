@@ -9,10 +9,8 @@ const MyPosts = () => {
             <h2>My posts</h2>
             <NewPost/>
             <ul className={s.postList}>
-                <Post/>
-                <Post/>
-                <Post/>
-                <Post/>
+                <Post post='Hello! How are you?' />
+                <Post post="it's my first post."/>
             </ul>
         </div>
     );
