@@ -1,0 +1,17 @@
+.dialogsWrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.dialogs, .messages {
+    margin: 20px;
+}
+
+.dialog, .message {
+    margin-bottom: 10px;
+}
+
+.activeDialog {
+    color: darkcyan;
+    font-weight: bold;
+}
