@@ -17,6 +17,11 @@ body {
     'n c c';
 }
 
+.app-wrapper-content {
+    grid-area: c;
+    background-color: whitesmoke;
+}
+
 .clearfix::after {
     content: '';
     display: block;
