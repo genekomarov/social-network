@@ -5,29 +5,16 @@ import Message from "./Message/Message"; //CSS import
 
 
 
-const Dialogs = () => {
+const Dialogs = (props) => {
 
-    let dialogs = [
-        {id: '1', name: 'Ivan'},
-        {id: '2', name: 'Vitaliy'},
-        {id: '3', name: 'Andrey'},
-        {id: '4', name: 'Anton'},
-        {id: '5', name: 'Sergey'},
-        {id: '6', name: 'Ilya'},
-    ];
 
-    let messages = [
-        {id: '1', message: 'Hello!'},
-        {id: '2', message: 'How are you?'},
-        {id: '3', message: 'I\'m fine!'}
-    ];
 
     let dialogsElements =
-        dialogs
+        props.dialogs
             .map (d => <Dialog name={d.name} id={d.id} />);
 
     let messagesElements =
-        messages
+        props.messages
             .map (m => <Message message={m.message} />)
 
     return (
