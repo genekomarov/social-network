@@ -21,22 +21,34 @@ const Message = (props) => {
 }
 
 const Dialogs = () => {
+
+    let dialogsData = [
+        {id: '1', name: 'Ivan'},
+        {id: '2', name: 'Vitaliy'},
+        {id: '3', name: 'Andrey'},
+        {id: '4', name: 'Anton'},
+        {id: '5', name: 'Sergey'},
+        {id: '6', name: 'Ilya'},
+    ];
+
+    let messagesData = [
+        {id: '1', message: 'Hello!'},
+        {id: '2', message: 'How are you?'},
+        {id: '3', message: 'I\'m fine!'}
+    ];
+
     return (
         <div>
             Dialogs
             <div className={s.dialogsWrapper}>
                 <div className={s.dialogs}>
-                    <Dialog name='Ivan'     id='1' />
-                    <Dialog name='Vitaliy'  id='2' />
-                    <Dialog name='Andrey'   id='3' />
-                    <Dialog name='Anton'    id='4' />
-                    <Dialog name='Sergey'   id='5' />
-                    <Dialog name='Ilya'     id='6' />
+                    <Dialog name={dialogsData[0].name} id={dialogsData[0].id} />
+                    <Dialog name={dialogsData[1].name} id={dialogsData[1].id} />
                 </div>
                 <div className={s.messages}>
-                    <Message message="Hello!" />
-                    <Message message="How are you?"/>
-                    <Message message="I'm fine!"/>
+                    <Message message={messagesData[0].message} />
+                    <Message message={messagesData[1].message} />
+                    <Message message={messagesData[2].message} />
                 </div>
             </div>
 
