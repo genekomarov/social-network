@@ -26,7 +26,7 @@
   <component name="ProjectId" id="1Zd7HM1FYJQR3aIaMVjWfRPxeM7" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/Content" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -37,6 +37,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\WEB\2020-03-25_REACT-KAMASUTRA\projects\01-first-project\React-social-network\src" />
       <recent name="D:\WEB\2020-03-25_REACT-KAMASUTRA\projects\01-first-project\React-social-network\src\components\Content" />
       <recent name="D:\WEB\2020-03-25_REACT-KAMASUTRA\projects\01-first-project\React-social-network\src\components\Content\News" />
       <recent name="D:\WEB\2020-03-25_REACT-KAMASUTRA\projects\01-first-project\React-social-network\src\components" />
@@ -102,7 +103,7 @@
       <workItem from="1585552727715" duration="12782000" />
       <workItem from="1585642955178" duration="8096000" />
       <workItem from="1585670150863" duration="3751000" />
-      <workItem from="1585724675128" duration="10279000" />
+      <workItem from="1585724675128" duration="13650000" />
     </task>
     <servers />
   </component>
