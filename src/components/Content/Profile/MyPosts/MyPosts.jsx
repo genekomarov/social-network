@@ -6,8 +6,10 @@ import Post from "./Post/Post";
 const MyPosts = (props) => {
 
     let postsElements =
-        props.posts
+        props.state
             .map (p => <Post post={p.post} likes={p.likes}/>)
+
+    
 
     return (
         <div className={s.wrapper}>

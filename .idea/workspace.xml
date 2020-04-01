@@ -14,9 +14,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
         <option value="JavaScript JSX File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -61,13 +61,23 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Node.js.App.js">
     <configuration name="App.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/App.js" working-dir="$PROJECT_DIR$/src">
+      <method v="2" />
+    </configuration>
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Node.js.App.jsx" />
+        <item itemvalue="npm.start" />
       </list>
     </recent_temporary>
   </component>
@@ -90,7 +100,8 @@
       <workItem from="1585467791501" duration="10823000" />
       <workItem from="1585552727715" duration="12782000" />
       <workItem from="1585642955178" duration="8096000" />
-      <workItem from="1585670150863" duration="3596000" />
+      <workItem from="1585670150863" duration="3751000" />
+      <workItem from="1585724675128" duration="4909000" />
     </task>
     <servers />
   </component>
