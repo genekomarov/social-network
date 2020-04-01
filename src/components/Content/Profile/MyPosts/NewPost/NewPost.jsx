@@ -1,14 +1,15 @@
 import React from 'react';
 import s from './NewPost.module.css' //CSS import
 
-let newPostElement = React.createRef();
+const NewPost = (props) => {
 
-let addPost = () => {
-    let text = newPostElement.current.value;
-    alert (text);
-}
+    let newPostElement = React.createRef();
 
-const NewPost = () => {
+    let addPost = () => {
+        let text = newPostElement.current.value;
+        props.addPost(text);
+    };
+
     return (
         <div className={s.wrapper}>
             <form action="">

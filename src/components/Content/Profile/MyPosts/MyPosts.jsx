@@ -14,7 +14,7 @@ const MyPosts = (props) => {
     return (
         <div className={s.wrapper}>
             <h2>My posts</h2>
-            <NewPost/>
+            <NewPost addPost={props.addPost}/>
             <ul className={s.postList}>
                 {postsElements}
             </ul>

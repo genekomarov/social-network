@@ -10,7 +10,7 @@ const Prorfile = (props) => {
                 <img className={s.unclearBlock__img} src="https://s1.1zoom.me/big0/930/Coast_Sunrises_and_sunsets_Waves_USA_Ocean_Kaneohe_521540_1280x775.jpg" alt=""/>
             </div>
             <ProfileData/>
-            <MyPosts state={props.state.posts}/>
+            <MyPosts state={props.state.posts} addPost={props.addPost}/>
         </main>
     );
 };
