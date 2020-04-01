@@ -9,7 +9,7 @@ const MyPosts = (props) => {
         props.state
             .map (p => <Post post={p.post} likes={p.likes}/>)
 
-    
+
 
     return (
         <div className={s.wrapper}>
