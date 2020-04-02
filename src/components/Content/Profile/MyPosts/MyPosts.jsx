@@ -6,7 +6,7 @@ import Post from "./Post/Post";
 const MyPosts = (props) => {
 
     let postsElements =
-        props.state
+        props.posts
             .map (p => <Post post={p.post} likes={p.likes}/>)
 
 
@@ -14,7 +14,10 @@ const MyPosts = (props) => {
     return (
         <div className={s.wrapper}>
             <h2>My posts</h2>
-            <NewPost addPost={props.addPost}/>
+            <NewPost
+                newPostText={props.newPostText}
+                addPost={props.addPost}
+                changeNewPostText={props.changeNewPostText}/>
             <ul className={s.postList}>
                 {postsElements}
             </ul>

@@ -7,13 +7,17 @@ const NewPost = (props) => {
 
     let addPost = () => {
         let text = newPostElement.current.value;
-        debugger;
         props.addPost(text);
+    };
+
+    let changeNewPostText = () => {
+        let text = newPostElement.current.value;
+        props.changeNewPostText(text);
     };
 
     return (
         <div className={s.wrapper}>
-                <textarea ref={newPostElement} name="post" rows='2'/>
+                <textarea ref={newPostElement} rows='2' value={props.newPostText} onChange={changeNewPostText}/>
                 <input className={s.submit} type="submit" value='Send' onClick={addPost}/>
         </div>
     );
