@@ -13,8 +13,7 @@ const Prorfile = (props) => {
             <MyPosts
                 posts={props.state.posts}
                 newPostText={props.state.newPostText}
-                addPost={props.addPost}
-                changeNewPostText={props.changeNewPostText}/>
+                dispatch={props.dispatch}/>
         </main>
     );
 };

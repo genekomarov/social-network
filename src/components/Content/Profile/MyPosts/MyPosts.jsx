@@ -9,15 +9,12 @@ const MyPosts = (props) => {
         props.posts
             .map (p => <Post post={p.post} likes={p.likes}/>)
 
-
-
     return (
         <div className={s.wrapper}>
             <h2>My posts</h2>
             <NewPost
                 newPostText={props.newPostText}
-                addPost={props.addPost}
-                changeNewPostText={props.changeNewPostText}/>
+                dispatch={props.dispatch}/>
             <ul className={s.postList}>
                 {postsElements}
             </ul>
