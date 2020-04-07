@@ -1,7 +1,7 @@
 import React from 'react';
 import s from './MyPosts.module.css'
-import NewPost from "./NewPost/NewPost";
 import Post from "./Post/Post";
+import NewPostContainer from "./NewPost/NewPostContainer";
 
 const MyPosts = (props) => {
 
@@ -9,12 +9,11 @@ const MyPosts = (props) => {
         props.posts
             .map (p => <Post post={p.post} likes={p.likes}/>)
 
+
     return (
         <div className={s.wrapper}>
             <h2>My posts</h2>
-            <NewPost
-                newPostText={props.newPostText}
-                dispatch={props.dispatch}/>
+            <NewPostContainer store={props.store} />
             <ul className={s.postList}>
                 {postsElements}
             </ul>

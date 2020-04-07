@@ -3,6 +3,7 @@ import s from './Dialogs.module.css'
 import Dialog from "./Dialog/Dialog";
 import Message from "./Message/Message";
 import NewMessage from "./NewMessage/NewMessage";
+import NewMessageContainer from "./NewMessage/NewMessageContainer";
 
 
 
@@ -27,7 +28,7 @@ const Dialogs = (props) => {
                 </div>
                 <div className={s.messages}>
                     {messagesElements}
-                    <NewMessage store={props.store}/>
+                    <NewMessageContainer store={props.store}/>
                 </div>
             </div>
 
