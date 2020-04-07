@@ -9,11 +9,10 @@ const MyPosts = (props) => {
         props.posts
             .map (p => <Post post={p.post} likes={p.likes}/>)
 
-
     return (
         <div className={s.wrapper}>
             <h2>My posts</h2>
-            <NewPostContainer store={props.store} />
+            <NewPostContainer />
             <ul className={s.postList}>
                 {postsElements}
             </ul>
