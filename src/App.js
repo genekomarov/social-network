@@ -8,10 +8,11 @@ import Music from "./components/Content/Music/Music";
 import Settings from "./components/Content/Settings/Settings";
 import {Route} from "react-router-dom";
 import DialogsContainer from "./components/Content/Dialogs/DialogsContainer";
+import UsersContainer from "./components/Content/Users/UsersContainer";
+
 
 
 const App = () => {
-
     return (
             <div className='app-wrapper'>
                 <Header/>
@@ -21,10 +22,10 @@ const App = () => {
                     <Route path='/dialogs' render={ () => <DialogsContainer />  } />
                     <Route path='/news' render={ () => <News /> } />
                     <Route path='/music' render={ () => <Music /> } />
+                    <Route path='/users' render={ () => <UsersContainer /> } />
                     <Route path='/settings' render={ () => <Settings /> } />
                 </div>
             </div>
     );
 };
-
 export default App;

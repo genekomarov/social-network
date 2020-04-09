@@ -7,7 +7,7 @@ const MyPosts = (props) => {
 
     let postsElements =
         props.posts
-            .map (p => <Post post={p.post} likes={p.likes}/>)
+            .map (p => <Post key={p.id} post={p.post} likes={p.likes}/>)
 
     return (
         <div className={s.wrapper}>
