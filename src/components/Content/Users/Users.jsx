@@ -3,23 +3,22 @@ import s from './Users.module.css';
 import * as axios from 'axios';
 import userPhoto from './../../../assets/images/user.webp'
 
+class Users extends React.Component {
 
-const Users = (props) => {
+    constructor (props) {
+        super (props);
 
-    if (props.users.length === 0) {
-
-        axios.get('https://social-network.samuraijs.com/api/1.0/users')
-            .then(response => {
-                debugger
-                props.setUsers(response.data.items);
-            });
-
-
+        if (this.props.users.length === 0) {
+            axios.get('https://social-network.samuraijs.com/api/1.0/users')
+                .then(response => {
+                    debugger
+                    props.setUsers(response.data.items);
+                });
+        }
     }
 
-
-    let usersElements =
-        props.users.map( u => (
+    usersElements = () => {
+        return this.props.users.map( u => (
             <div key={u.id} className={s.user}>
                 <div className={s.left}>
                     <img src={u.photos.small != null
@@ -29,12 +28,12 @@ const Users = (props) => {
                          alt="" className={s.avatar}/>
                     { u.followed
                         ? (
-                            <button className={s.followBtn} onClick={() => props.unfollowUser(u.id)}>
+                            <button className={s.followBtn} onClick={() => this.props.unfollowUser(u.id)}>
                                 Follow
                             </button>
                         )
                         : (
-                            <button className={s.followBtn} onClick={() => props.followUser(u.id)}>
+                            <button className={s.followBtn} onClick={() => this.props.followUser(u.id)}>
                                 Unfollow
                             </button>
                         )
@@ -47,15 +46,17 @@ const Users = (props) => {
                 </div>
             </div>
         ));
-
-    return (
-        <div>
-            Users
-            <div className={s.users}>
-                {usersElements}
+    };
+    render() {
+        return (
+            <div>
+                Users
+                <div className={s.users}>
+                    {this.usersElements()}
+                </div>
             </div>
-        </div>
-    );
-};
+        )
+    }
+}
 
 export default Users;
