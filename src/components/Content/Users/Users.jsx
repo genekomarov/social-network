@@ -5,20 +5,16 @@ import userPhoto from './../../../assets/images/user.webp'
 
 class Users extends React.Component {
 
-    constructor (props) {
-        super (props);
-
-        if (this.props.users.length === 0) {
-            axios.get('https://social-network.samuraijs.com/api/1.0/users')
-                .then(response => {
-                    debugger
-                    props.setUsers(response.data.items);
-                });
-        }
+    componentDidMount() {
+        axios.get('https://social-network.samuraijs.com/api/1.0/users')
+            .then(response => {
+                debugger
+                this.props.setUsers(response.data.items);
+            });
     }
 
-    usersElements = () => {
-        return this.props.users.map( u => (
+    _usersElements = () => {
+        return this.props.users.map(u => (
             <div key={u.id} className={s.user}>
                 <div className={s.left}>
                     <img src={u.photos.small != null
@@ -26,7 +22,7 @@ class Users extends React.Component {
                         : userPhoto
                     }
                          alt="" className={s.avatar}/>
-                    { u.followed
+                    {u.followed
                         ? (
                             <button className={s.followBtn} onClick={() => this.props.unfollowUser(u.id)}>
                                 Follow
@@ -47,12 +43,13 @@ class Users extends React.Component {
             </div>
         ));
     };
+
     render() {
         return (
             <div>
                 Users
                 <div className={s.users}>
-                    {this.usersElements()}
+                    {this._usersElements()}
                 </div>
             </div>
         )
