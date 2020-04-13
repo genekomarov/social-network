@@ -31,7 +31,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="12.13.0" />
     <property name="js.last.introduce.type" value="CONST" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/Content/Users" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -135,6 +135,9 @@
       <workItem from="1586072146869" duration="6814000" />
       <workItem from="1586250016264" duration="21379000" />
       <workItem from="1586539788251" duration="9457000" />
+      <workItem from="1586634398371" duration="798000" />
+      <workItem from="1586684278435" duration="4239000" />
+      <workItem from="1586762030393" duration="6577000" />
     </task>
     <servers />
   </component>
