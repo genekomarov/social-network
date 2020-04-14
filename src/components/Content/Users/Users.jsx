@@ -1,6 +1,7 @@
 import React from 'react';
 import s from './Users.module.css';
 import userPhoto from './../../../assets/images/user.webp'
+import Preloader from "../../common/Preloader/Preloader";
 
 
 let Users = (props) => {
@@ -51,14 +52,17 @@ let Users = (props) => {
     }
 
     return (
-        <div>
+        <>
             <div className={s.pages}>
                 {pages}
             </div>
-            <div className={s.users}>
-                {usersElements()}
+            <div>
+                {props.isFetching && <Preloader />}
             </div>
-        </div>
+            <div className={s.users}>
+                { !props.isFetching && usersElements()}
+            </div>
+        </>
     )
 }
 
