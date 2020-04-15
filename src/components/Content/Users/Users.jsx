@@ -2,6 +2,7 @@ import React from 'react';
 import s from './Users.module.css';
 import userPhoto from './../../../assets/images/user.webp'
 import Preloader from "../../common/Preloader/Preloader";
+import {NavLink} from "react-router-dom";
 
 
 let Users = (props) => {
@@ -10,11 +11,16 @@ let Users = (props) => {
         return props.users.map(u => (
             <div key={u.id} className={s.user}>
                 <div className={s.left}>
-                    <img src={u.photos.small != null
-                        ? u.photos.small
-                        : userPhoto
-                    }
-                         alt="" className={s.avatar}/>
+
+                    <NavLink to={'/profile/' + u.id}>
+                        <img src={u.photos.small != null
+                            ? u.photos.small
+                            : userPhoto
+                        }
+                             alt="" className={s.avatar}
+                        />
+                    </NavLink>
+
                     {u.followed
                         ? (
                             <button className={s.followBtn} onClick={() => props.unfollowUser(u.id)}>
@@ -46,6 +52,7 @@ let Users = (props) => {
          i++) {
         pages.push(
             <span
+                key={i}
                 className={i === props.currentPage && s.selectedPage}
                 onClick={ () => {props.onPageChanged(i)}}> {i} </span>
         )

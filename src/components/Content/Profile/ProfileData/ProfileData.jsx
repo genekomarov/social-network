@@ -1,18 +1,22 @@
 import React from 'react';
 import s from './ProfileData.module.css'
+import Preloader from "../../../common/Preloader/Preloader";
 
-const ProfileData = () => {
+const ProfileData = (props) => {
+
+    if (!props.profile) {
+        return <Preloader />
+    }
+
     return (
         <div>
             <div>
-                <img className={s.avatar__img} src="https://i.mycdn.me/i?r=AyH4iRPQ2q0otWIFepML2LxRqdrlx2hME57F1Bpq1Ei1ug" alt=""/>
+                <img className={s.avatar__img} src={props.profile.photos.large} alt=""/>
             </div>
             <div className={`${s.description} clearfix`}>
-                <h2 className={s.name}>Evgeniy K.</h2>
+                <h2 className={s.name}>{props.profile.fullName}</h2>
 
-                <div>Day of Birth: 17 march</div>
-                <div>City: Ekaterinburg</div>
-                <div>Skills: html, css, js, react</div>
+                <div>About me: {props.profile.aboutMe}</div>
             </div>
         </div>
     );

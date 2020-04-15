@@ -17,9 +17,9 @@
         <option value="JavaScript JSX File" />
         <option value="JavaScript File" />
         <option value="JSX" />
-        <option value="ComponentContainer" />
         <option value="CSS File" />
         <option value="Component JSX" />
+        <option value="ComponentContainer" />
       </list>
     </option>
   </component>
@@ -42,19 +42,19 @@
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.2.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\WEB\2020-03-25_REACT-KAMASUTRA\projects\01-first-project\React-social-network\src\components\Content\Dialogs" />
-      <recent name="D:\WEB\2020-03-25_REACT-KAMASUTRA\projects\01-first-project\React-social-network\src\components\Content" />
-      <recent name="D:\WEB\2020-03-25_REACT-KAMASUTRA\projects\01-first-project\React-social-network\src\components\Content\Profile" />
-      <recent name="D:\WEB\2020-03-25_REACT-KAMASUTRA\projects\01-first-project\React-social-network\src\components\Content\Profile\MyPosts" />
-      <recent name="D:\WEB\2020-03-25_REACT-KAMASUTRA\projects\01-first-project\React-social-network\src\components\Profile" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\WEB\2020-03-25_REACT-KAMASUTRA\projects\01-first-project\React-social-network\src\components\Content\Users" />
       <recent name="D:\WEB\2020-03-25_REACT-KAMASUTRA\projects\01-first-project\React-social-network\src\redux" />
       <recent name="D:\WEB\2020-03-25_REACT-KAMASUTRA\projects\01-first-project\React-social-network\src\components\Content\Dialogs\NewMessage" />
       <recent name="D:\WEB\2020-03-25_REACT-KAMASUTRA\projects\01-first-project\React-social-network\src" />
       <recent name="D:\WEB\2020-03-25_REACT-KAMASUTRA\projects\01-first-project\React-social-network\src\components\Content" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\WEB\2020-03-25_REACT-KAMASUTRA\projects\01-first-project\React-social-network\src\components\Content\Dialogs" />
+      <recent name="D:\WEB\2020-03-25_REACT-KAMASUTRA\projects\01-first-project\React-social-network\src\components\Content" />
+      <recent name="D:\WEB\2020-03-25_REACT-KAMASUTRA\projects\01-first-project\React-social-network\src\components\Content\Profile" />
+      <recent name="D:\WEB\2020-03-25_REACT-KAMASUTRA\projects\01-first-project\React-social-network\src\components\Content\Profile\MyPosts" />
+      <recent name="D:\WEB\2020-03-25_REACT-KAMASUTRA\projects\01-first-project\React-social-network\src\components\Profile" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -139,6 +139,7 @@
       <workItem from="1586684278435" duration="4239000" />
       <workItem from="1586762030393" duration="6577000" />
       <workItem from="1586852599660" duration="7873000" />
+      <workItem from="1586933132376" duration="11118000" />
     </task>
     <servers />
   </component>
