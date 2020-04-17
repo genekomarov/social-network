@@ -7,3 +7,9 @@
 .logo {
     height: 100%;
 }
+
+.auth {
+    float: right;
+    margin: 5px;
+    font-size: 0.9rem;
+}
