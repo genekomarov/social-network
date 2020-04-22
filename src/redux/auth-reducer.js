@@ -2,11 +2,11 @@ const SET_USER_DATA = 'SET-USER-DATA';
 const ACTION_TYPE_2 = 'ACTION-TYPE-2';
 
 let initialState = {
-    id: 2,
+    id: 2,  //идентификатор пользователя
     email: null,
     login: null,
     isFetching: false,
-    isAuth: false
+    isAuth: false //Статус авторизации
 };
 
 const authReducer = (state = initialState, action) => {
