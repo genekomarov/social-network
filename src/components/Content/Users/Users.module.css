@@ -17,6 +17,10 @@
     color: white;
 }
 
+.followBtn:disabled {
+    background: darkgray;
+}
+
 .users {
     display: flex;
     flex-direction: column;
