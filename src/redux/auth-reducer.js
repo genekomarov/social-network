@@ -1,5 +1,6 @@
+import {authAPI} from "../api/api";
+
 const SET_USER_DATA = 'SET-USER-DATA';
-const ACTION_TYPE_2 = 'ACTION-TYPE-2';
 
 let initialState = {
     id: 2,  //идентификатор пользователя
@@ -17,8 +18,6 @@ const authReducer = (state = initialState, action) => {
                 ...action.data,
                 isAuth: true
             };
-        case ACTION_TYPE_2:
-            return {};
         default:
             return state;
     }
@@ -29,5 +28,17 @@ export const setAuthUserData = (id, email, login) =>
         type: SET_USER_DATA,
         data: {id, email, login}
     });
+
+export const authCheck = () => {
+    return (dispatch) => {
+        authAPI.authCheck()
+            .then(data => {
+                if (data.resultCode === 0) {
+                    let {id, email, login} = data.data;
+                    dispatch(setAuthUserData(id, email, login));
+                }
+            });
+    }
+};
 
 export default authReducer;
