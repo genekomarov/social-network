@@ -10,7 +10,6 @@ class HeaderContainer extends React.Component {
         // Если пройдена - устанавливаем данные пользователя
 
         this.props.authCheck();
-
     }
 
     render() {

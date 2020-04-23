@@ -17,10 +17,10 @@
         <option value="JavaScript JSX File" />
         <option value="JSX" />
         <option value="CSS File" />
-        <option value="Component JSX" />
         <option value="reducer" />
         <option value="ComponentContainer" />
         <option value="JavaScript File" />
+        <option value="Component JSX" />
       </list>
     </option>
   </component>

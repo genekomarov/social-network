@@ -4,6 +4,7 @@ import ProfileData from "./ProfileData/ProfileData";
 import MyPostsContainer from "./MyPosts/Post/MyPostsContainer";
 
 const Profile = (props) => {
+
     return (
         <main className={s.content}>
             <div>
