@@ -24,7 +24,7 @@ export const usersAPI = {
     getUserProfile: (userId) =>
         instance.get(`profile/` + userId)
             .then(response => response.data)
-}
+};
 
 export const authAPI = {
     authCheck: () => instance.get(`auth/me`)

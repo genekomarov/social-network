@@ -3,7 +3,7 @@ import {authAPI} from "../api/api";
 const SET_USER_DATA = 'SET-USER-DATA';
 
 let initialState = {
-    id: 2,  //идентификатор пользователя
+    id: 7252,  //идентификатор пользователя
     email: null,
     login: null,
     isFetching: false,

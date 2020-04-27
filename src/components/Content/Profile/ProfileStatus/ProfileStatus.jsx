@@ -8,6 +8,7 @@ class ProfileStatus extends React.Component{
     };
 
     activateEditMode = () => {
+        console.log(this);
         this.setState({  //Асинхронная функция. Выполняется после всей синхронной работы функции
             editMode: true
         })
