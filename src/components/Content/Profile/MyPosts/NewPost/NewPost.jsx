@@ -1,10 +1,11 @@
 import React from 'react';
 import s from './NewPost.module.css'
+import {Field, reduxForm} from "redux-form";
 
 
 const NewPost = (props) => {
 
-    let newPostElement = React.createRef();
+    /*let newPostElement = React.createRef();
 
     let onAddPost = () => {
         props.addPost();
@@ -13,14 +14,26 @@ const NewPost = (props) => {
     let onChangeNewPostText = () => {
         let text = newPostElement.current.value;
         props.changeNewPostText(text);
+    };*/
+
+    const onAddPost = (formData) => {
+        props.addPost(formData.message);
     };
 
     return (
-        <div className={s.wrapper}>
-                <textarea ref={newPostElement} rows='2' value={props.newPostText} onChange={onChangeNewPostText}/>
-                <input className={s.submit} type="submit" value='Send' onClick={onAddPost}/>
-        </div>
+        <NewPostFormRedux onSubmit={onAddPost}/>
     );
 };
+
+const NewPostForm = (props) => {
+    return (
+        <form className={s.wrapper} onSubmit={props.handleSubmit}>
+            <Field component={'textarea'} name={'message'} className={s.textarea} rows='2' />
+            <button className={s.submit}>Submit</button>
+        </form>
+    )
+};
+
+const NewPostFormRedux = reduxForm({form:'profileNewPost'})(NewPostForm);
 
 export default NewPost;

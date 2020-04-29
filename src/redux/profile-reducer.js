@@ -10,7 +10,7 @@ let initialState = {
         {id: 0, post: 'Hello! How are you?', likes: 12},
         {id: 1, post: 'it\'s my first post.', likes: 0}
     ],
-    newPostText: '',
+    /*newPostText: '',*/
     profile: null,
     status: ""
 };
@@ -19,18 +19,18 @@ const profileReducer = (state = initialState, action) => {
 
     switch (action.type) {
         case ADD_POST:
-            let text = state.newPostText;
+            let text = action.post;
             return {
                 ...state,
                 posts: [...state.posts, {id: 2, post: text, likes: 0}],
                 newPostText: ''
             };
-        case CHANGE_NEW_POST_TEXT:
+        /*case CHANGE_NEW_POST_TEXT:
             debugger
             return {
                 ...state,
                 newPostText: action.newPostText
-            };
+            };*/
         case SET_USER_PROFILE:
             return { ...state, profile: action.userProfile};
         case SET_STATUS:
@@ -42,16 +42,17 @@ const profileReducer = (state = initialState, action) => {
     }
 };
 
-export const addPostActionCreator = () =>
+export const addPostActionCreator = (post) =>
     ({
-        type: ADD_POST
+        type: ADD_POST,
+        post
     });
 
-export const changeNewPostTextActionCreator = (text) =>
+/*export const changeNewPostTextActionCreator = (text) =>
     ({
         type: CHANGE_NEW_POST_TEXT,
         newPostText: text
-    });
+    });*/
 
 export const setUserProfile = (userProfile) =>
     ({
