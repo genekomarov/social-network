@@ -1,20 +1,12 @@
 import React from 'react';
 import s from './NewPost.module.css'
 import {Field, reduxForm} from "redux-form";
+import {maxLength, required} from "../../../../../utils/validators/validators";
+import {Textarea} from "../../../../common/FormsControls/FormsControls";
 
+const maxLength10 = maxLength(10);
 
 const NewPost = (props) => {
-
-    /*let newPostElement = React.createRef();
-
-    let onAddPost = () => {
-        props.addPost();
-    };
-
-    let onChangeNewPostText = () => {
-        let text = newPostElement.current.value;
-        props.changeNewPostText(text);
-    };*/
 
     const onAddPost = (formData) => {
         props.addPost(formData.message);
@@ -28,7 +20,8 @@ const NewPost = (props) => {
 const NewPostForm = (props) => {
     return (
         <form className={s.wrapper} onSubmit={props.handleSubmit}>
-            <Field component={'textarea'} name={'message'} className={s.textarea} rows='2' />
+            <Field validate={[required, maxLength10]}
+                component={Textarea} name={'message'} className={s.textarea} placeholder={'Post message'} rows='2' />
             <button className={s.submit}>Submit</button>
         </form>
     )

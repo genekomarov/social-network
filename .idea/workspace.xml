@@ -16,11 +16,11 @@
       <list>
         <option value="JavaScript JSX File" />
         <option value="JSX" />
-        <option value="CSS File" />
         <option value="reducer" />
         <option value="ComponentContainer" />
-        <option value="JavaScript File" />
         <option value="Component JSX" />
+        <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -43,19 +43,19 @@
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.2.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\WEB\2020-03-25_REACT-KAMASUTRA\projects\01-first-project\React-social-network\src\components\Content\Users" />
-      <recent name="D:\WEB\2020-03-25_REACT-KAMASUTRA\projects\01-first-project\React-social-network\src\redux" />
-      <recent name="D:\WEB\2020-03-25_REACT-KAMASUTRA\projects\01-first-project\React-social-network\src\components\Content\Dialogs\NewMessage" />
-      <recent name="D:\WEB\2020-03-25_REACT-KAMASUTRA\projects\01-first-project\React-social-network\src" />
-      <recent name="D:\WEB\2020-03-25_REACT-KAMASUTRA\projects\01-first-project\React-social-network\src\components\Content" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\WEB\2020-03-25_REACT-KAMASUTRA\projects\01-first-project\React-social-network\src\components\Content\Dialogs" />
       <recent name="D:\WEB\2020-03-25_REACT-KAMASUTRA\projects\01-first-project\React-social-network\src\components\Content" />
       <recent name="D:\WEB\2020-03-25_REACT-KAMASUTRA\projects\01-first-project\React-social-network\src\components\Content\Profile" />
       <recent name="D:\WEB\2020-03-25_REACT-KAMASUTRA\projects\01-first-project\React-social-network\src\components\Content\Profile\MyPosts" />
       <recent name="D:\WEB\2020-03-25_REACT-KAMASUTRA\projects\01-first-project\React-social-network\src\components\Profile" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\WEB\2020-03-25_REACT-KAMASUTRA\projects\01-first-project\React-social-network\src\components\Content\Users" />
+      <recent name="D:\WEB\2020-03-25_REACT-KAMASUTRA\projects\01-first-project\React-social-network\src\redux" />
+      <recent name="D:\WEB\2020-03-25_REACT-KAMASUTRA\projects\01-first-project\React-social-network\src\components\Content\Dialogs\NewMessage" />
+      <recent name="D:\WEB\2020-03-25_REACT-KAMASUTRA\projects\01-first-project\React-social-network\src" />
+      <recent name="D:\WEB\2020-03-25_REACT-KAMASUTRA\projects\01-first-project\React-social-network\src\components\Content" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -156,6 +156,7 @@
       <workItem from="1588075291772" duration="4432000" />
       <workItem from="1588088825385" duration="680000" />
       <workItem from="1588164554966" duration="11666000" />
+      <workItem from="1588231579877" duration="11084000" />
     </task>
     <servers />
   </component>
