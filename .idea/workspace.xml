@@ -18,9 +18,9 @@
         <option value="JSX" />
         <option value="ComponentContainer" />
         <option value="Component JSX" />
-        <option value="JavaScript File" />
         <option value="CSS File" />
         <option value="reducer" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -157,7 +157,7 @@
       <workItem from="1588088825385" duration="680000" />
       <workItem from="1588164554966" duration="11666000" />
       <workItem from="1588231579877" duration="11367000" />
-      <workItem from="1588319563257" duration="16215000" />
+      <workItem from="1588319563257" duration="17579000" />
     </task>
     <servers />
   </component>
