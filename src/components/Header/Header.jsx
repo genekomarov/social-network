@@ -7,7 +7,14 @@ const Header = (props) => {
         <header className={s.header}>
             <img className={s.logo} src="https://s1.logaster.com/static/v3/img/products/logo.png" alt=""/>
             <div className={s.auth}>
-                { props.isAuth ? props.login: <NavLink to={'/login'}>Login</NavLink>}
+                { props.isAuth
+                    ? (
+                        <div>
+                            <div>{props.login}</div>
+                            <button onClick={props.logout}>Log out</button>
+                        </div>
+                    )
+                    : <NavLink to={'/login'}>Login</NavLink>}
             </div>
         </header>
     );
