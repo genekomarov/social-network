@@ -3,6 +3,7 @@ import s from './Profile.module.css';
 import ProfileData from "./ProfileData/ProfileData";
 import MyPostsContainer from "./MyPosts/Post/MyPostsContainer";
 import ProfileStatus from "./ProfileStatus/ProfileStatus";
+import ProfileStatusWithHooks from "./ProfileStatus/ProfileStatusWithHooks";
 
 const Profile = (props) => {
 
@@ -14,7 +15,7 @@ const Profile = (props) => {
                      alt=""/>
             </div>*/}
             <ProfileData profile={props.profile}/>
-            <ProfileStatus status={props.status} updateStatus={props.updateStatus}/>
+            <ProfileStatusWithHooks status={props.status} updateStatus={props.updateStatus}/>
             <MyPostsContainer />
         </main>
     )
