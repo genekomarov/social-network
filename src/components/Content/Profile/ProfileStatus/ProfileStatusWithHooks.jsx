@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 //import s from '   '
 
 const ProfileStatusWithHooks = (props) => {
@@ -9,6 +9,10 @@ const ProfileStatusWithHooks = (props) => {
 
     let [editMode, setEditMode] = useState(false); //деструктурирующее присваивание
     let [status, setStatus] = useState(props.status);
+
+    useEffect( () => {
+        setStatus(props.status);
+    }, [props.status]);
 
     const activateEditMode = () => {
         setEditMode(true);
