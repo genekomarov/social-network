@@ -4,16 +4,17 @@ import Navbar from "./components/Navbar/Navbar";
 import News from "./components/Content/News/News";
 import Music from "./components/Content/Music/Music";
 import Settings from "./components/Content/Settings/Settings";
-import {Route, withRouter} from "react-router-dom";
+import {BrowserRouter, Route, withRouter} from "react-router-dom";
 import DialogsContainer from "./components/Content/Dialogs/DialogsContainer";
 import UsersContainer from "./components/Content/Users/UsersContainer";
 import ProfileContainer from "./components/Content/Profile/ProfileContainer";
 import HeaderContainer from "./components/Header/HeaderContainer";
 import Login from "./components/Login/Login";
-import {connect} from "react-redux";
+import {connect, Provider} from "react-redux";
 import {compose} from "redux";
 import Preloader from "./components/common/Preloader/Preloader";
 import {initializeApp} from "./redux/app-reducer";
+import store from "./redux/redux-store";
 
 
 class App extends Component {
@@ -52,7 +53,19 @@ const mapDispatchToProps = { //as Object
     initializeApp
 };
 
-export default compose(
+let AppContainer = compose(
     withRouter,
     connect(mapStateToProps, mapDispatchToProps)
 )(App);
+
+const SocialNetworkApp = (props) => {
+    return (
+        <BrowserRouter>
+            <Provider store={store}>
+                <AppContainer />
+            </Provider>
+        </BrowserRouter>
+    )
+};
+
+export default SocialNetworkApp;
