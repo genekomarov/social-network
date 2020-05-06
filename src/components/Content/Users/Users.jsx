@@ -1,15 +1,26 @@
 import React from 'react';
 import s from './Users.module.css';
-import userPhoto from './../../../assets/images/user.webp'
 import Preloader from "../../common/Preloader/Preloader";
-import {NavLink} from "react-router-dom";
+import Paginator from "../../common/Paginator/Paginator";
+import User from "./User/User";
 
 
-let Users = (props) => {
+let Users = ({users, isFollowing, unfollow, follow, isFetching,
+                 totalUsersCount, pageSize, currentPage, onPageChanged, ...props}) => {
 
     let usersElements = () => {
-        return props.users.map(u => (
-            <div key={u.id} className={s.user}>
+        return users.map(u => (
+            <User
+                id={u.id}
+                photos={u.photos}
+                name={u.name}
+                status={u.status}
+                followed={u.followed}
+                isFollowing={isFollowing}
+                follow={follow}
+                unfollow={unfollow}
+            />
+            /*{/!*<div key={u.id} className={s.user}>
                 <div className={s.left}>
 
                     <NavLink to={'/profile/' + u.id}>
@@ -23,18 +34,18 @@ let Users = (props) => {
 
                     {u.followed
                         ? (
-                            <button disabled={props.isFollowing.some( (item) => item === u.id )} className={s.followBtn} onClick={() => {
+                            <button disabled={isFollowing.some( (item) => item === u.id )} className={s.followBtn} onClick={() => {
 
-                                props.unfollow(u.id);
+                                unfollow(u.id);
 
                             }}>
                                 Follow
                             </button>
                         )
                         : (
-                            <button disabled={props.isFollowing.some((item) => item === u.id )} className={s.followBtn} onClick={() => {
+                            <button disabled={isFollowing.some((item) => item === u.id )} className={s.followBtn} onClick={() => {
 
-                                props.follow(u.id);
+                                follow(u.id);
 
                             }}>
                                 Unfollow
@@ -47,11 +58,11 @@ let Users = (props) => {
                     <div className={s.location}>{'u.location.country'}<br/>{'u.location.city'}</div>
                     <div className={s.status}>{u.status}</div>
                 </div>
-            </div>
+            </div>*!/}*/
         ));
     };
 
-    let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
+/*    let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
 
     let pages = [];
 
@@ -64,21 +75,27 @@ let Users = (props) => {
                 className={i === props.currentPage && s.selectedPage}
                 onClick={ () => {props.onPageChanged(i)}}> {i} </span>
         )
-    }
+    }*/
 
     return (
         <>
-            <div className={s.pages}>
+            <Paginator
+                totalUsersCount={totalUsersCount}
+                pageSize={pageSize}
+                currentPage={currentPage}
+                onPageChanged={onPageChanged}
+            />
+            {/*<div className={s.pages}>
                 {pages}
-            </div>
+            </div>*/}
             <div>
-                {props.isFetching && <Preloader />}
+                {isFetching && <Preloader />}
             </div>
             <div className={s.users}>
-                { !props.isFetching && usersElements()}
+                { !isFetching && usersElements()}
             </div>
         </>
     )
-}
+};
 
 export default Users;

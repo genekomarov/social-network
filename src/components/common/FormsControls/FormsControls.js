@@ -2,9 +2,9 @@ import React from "react";
 import s from './FormControls.module.css'
 
 
-export const FormControl = ({input, meta, children, ...props}) => {
+export const FormControl = ({input, meta: {touched, error}, children, ...props}) => {
 
-    const hasError = meta.touched && meta.error;
+    const hasError = touched && error;
 
     return (
         <div className={`${s.formControl} ${hasError && s.error}`}>
@@ -14,7 +14,7 @@ export const FormControl = ({input, meta, children, ...props}) => {
                 Object.assign(props, input)
             )}
 
-            {hasError && <span>{meta.error}</span>}
+            {hasError && <span>{error}</span>}
         </div>
     )
 };
