@@ -5,9 +5,11 @@ import News from "./components/Content/News/News";
 import Music from "./components/Content/Music/Music";
 import Settings from "./components/Content/Settings/Settings";
 import {BrowserRouter, Route, withRouter} from "react-router-dom";
-import DialogsContainer from "./components/Content/Dialogs/DialogsContainer";
+
+/*import DialogsContainer from "./components/Content/Dialogs/DialogsContainer";
 import UsersContainer from "./components/Content/Users/UsersContainer";
-import ProfileContainer from "./components/Content/Profile/ProfileContainer";
+import ProfileContainer from "./components/Content/Profile/ProfileContainer";*/
+
 import HeaderContainer from "./components/Header/HeaderContainer";
 import Login from "./components/Login/Login";
 import {connect, Provider} from "react-redux";
@@ -15,6 +17,11 @@ import {compose} from "redux";
 import Preloader from "./components/common/Preloader/Preloader";
 import {initializeApp} from "./redux/app-reducer";
 import store from "./redux/redux-store";
+import withSuspense from "./hoc/withSuspense";
+
+const DialogsContainer = React.lazy( () => import("./components/Content/Dialogs/DialogsContainer") );
+const UsersContainer = React.lazy( () => import("./components/Content/Users/UsersContainer") );
+const ProfileContainer = React.lazy( () => import("./components/Content/Profile/ProfileContainer") );
 
 
 class App extends Component {
@@ -31,11 +38,11 @@ class App extends Component {
                 <HeaderContainer/>
                 <Navbar/>
                 <div className='app-wrapper-content'>
-                    <Route path='/profile/:userId?' render={() => <ProfileContainer/>}/>
-                    <Route path='/dialogs' render={() => <DialogsContainer/>}/>
+                    <Route path='/profile/:userId?' render={withSuspense(ProfileContainer)}/>
+                    <Route path='/dialogs' render={withSuspense(DialogsContainer)}/>
                     <Route path='/news' render={() => <News/>}/>
                     <Route path='/music' render={() => <Music/>}/>
-                    <Route path='/users' render={() => <UsersContainer/>}/>
+                    <Route path='/users' render={withSuspense(UsersContainer)}/>
                     <Route path='/settings' render={() => <Settings/>}/>
                     <Route path='/login' render={() => <Login/>}/>
                 </div>
@@ -48,8 +55,7 @@ const mapStateToProps = (state) => ({
     initialized: state.app.initialized
 });
 
-const mapDispatchToProps = { //as Object
-    /*authCheck,*/
+const mapDispatchToProps = {
     initializeApp
 };
 
