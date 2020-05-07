@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c3a19b2b359b82584cd3f82e4d4c96cf",
+    "revision": "a835929e61d58119aead970eb427304c",
     "url": "/React-Kamasutra/index.html"
   },
   {
@@ -8,44 +8,44 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/React-Kamasutra/static/css/3.d5c179fe.chunk.css"
   },
   {
-    "revision": "6f4c53e9d37ff0b46dc3",
+    "revision": "5aa34011f3cb1ad9b8a9",
     "url": "/React-Kamasutra/static/css/4.9fe74602.chunk.css"
   },
   {
-    "revision": "745fe3f6a3da892eb39a",
+    "revision": "594b8317236250e176d7",
     "url": "/React-Kamasutra/static/css/5.10d3189d.chunk.css"
   },
   {
-    "revision": "7f82b5852727fd239018",
+    "revision": "9fc4317db90a9f53632a",
     "url": "/React-Kamasutra/static/css/main.76e06dac.chunk.css"
   },
   {
-    "revision": "d19851b4d1a80a65f855",
-    "url": "/React-Kamasutra/static/js/2.8abf4d0d.chunk.js"
+    "revision": "922add693bf14fed2ac0",
+    "url": "/React-Kamasutra/static/js/2.ea2086b0.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/React-Kamasutra/static/js/2.8abf4d0d.chunk.js.LICENSE.txt"
+    "url": "/React-Kamasutra/static/js/2.ea2086b0.chunk.js.LICENSE.txt"
   },
   {
     "revision": "77b36393ca011fe18234",
     "url": "/React-Kamasutra/static/js/3.7bdd3b36.chunk.js"
   },
   {
-    "revision": "6f4c53e9d37ff0b46dc3",
-    "url": "/React-Kamasutra/static/js/4.084f5000.chunk.js"
+    "revision": "5aa34011f3cb1ad9b8a9",
+    "url": "/React-Kamasutra/static/js/4.a04e0f13.chunk.js"
   },
   {
-    "revision": "745fe3f6a3da892eb39a",
-    "url": "/React-Kamasutra/static/js/5.9aa6d93f.chunk.js"
+    "revision": "594b8317236250e176d7",
+    "url": "/React-Kamasutra/static/js/5.35591567.chunk.js"
   },
   {
-    "revision": "7f82b5852727fd239018",
-    "url": "/React-Kamasutra/static/js/main.062490b3.chunk.js"
+    "revision": "9fc4317db90a9f53632a",
+    "url": "/React-Kamasutra/static/js/main.7ffa726d.chunk.js"
   },
   {
-    "revision": "68ff055287e3f0dae35f",
-    "url": "/React-Kamasutra/static/js/runtime-main.79c0d202.js"
+    "revision": "9be0a47f11380e441295",
+    "url": "/React-Kamasutra/static/js/runtime-main.48833044.js"
   },
   {
     "revision": "9134df9cf1429fb69f39e7f932546070",
