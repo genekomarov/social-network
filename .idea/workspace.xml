@@ -85,20 +85,6 @@
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="ProfileStatus component.after creation &lt;input&gt; shouldn't be display" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/src/components/Content/Profile/ProfileStatus/ProfileStatus.test.js" />
-      <test-names>
-        <test-name value="ProfileStatus component" />
-        <test-name value="after creation &lt;input&gt; shouldn't be display" />
-      </test-names>
-      <method v="2" />
-    </configuration>
     <configuration name="ProfileStatus component.after creation &lt;span&gt; with status should contains correct status" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -141,13 +127,23 @@
       </test-names>
       <method v="2" />
     </configuration>
+    <configuration name="deploy" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="deploy" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.deploy" />
         <item itemvalue="Jest.ProfileStatus component" />
         <item itemvalue="Jest.ProfileStatus component.callback should be called" />
         <item itemvalue="Jest.ProfileStatus component.input should be displayed in editMode instead of span" />
         <item itemvalue="Jest.ProfileStatus component.after creation &lt;span&gt; with status should contains correct status" />
-        <item itemvalue="Jest.ProfileStatus component.after creation &lt;input&gt; shouldn't be display" />
       </list>
     </recent_temporary>
   </component>
@@ -205,7 +201,9 @@
       <workItem from="1588319563257" duration="19318000" />
       <workItem from="1588589735906" duration="9910000" />
       <workItem from="1588699670353" duration="1983000" />
-      <workItem from="1588744185104" duration="24582000" />
+      <workItem from="1588744185104" duration="24869000" />
+      <workItem from="1588862829438" duration="1717000" />
+      <workItem from="1588867677601" duration="234000" />
     </task>
     <servers />
   </component>
