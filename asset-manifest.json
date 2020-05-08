@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/React-Kamasutra/static/css/main.76e06dac.chunk.css",
-    "main.js": "/React-Kamasutra/static/js/main.38ee58a0.chunk.js",
-    "main.js.map": "/React-Kamasutra/static/js/main.38ee58a0.chunk.js.map",
+    "main.js": "/React-Kamasutra/static/js/main.d375104e.chunk.js",
+    "main.js.map": "/React-Kamasutra/static/js/main.d375104e.chunk.js.map",
     "runtime-main.js": "/React-Kamasutra/static/js/runtime-main.48833044.js",
     "runtime-main.js.map": "/React-Kamasutra/static/js/runtime-main.48833044.js.map",
     "static/js/2.ea2086b0.chunk.js": "/React-Kamasutra/static/js/2.ea2086b0.chunk.js",
@@ -17,7 +17,7 @@
     "static/js/5.35591567.chunk.js": "/React-Kamasutra/static/js/5.35591567.chunk.js",
     "static/js/5.35591567.chunk.js.map": "/React-Kamasutra/static/js/5.35591567.chunk.js.map",
     "index.html": "/React-Kamasutra/index.html",
-    "precache-manifest.47fea17856881758ddc6b5117a8eee2d.js": "/React-Kamasutra/precache-manifest.47fea17856881758ddc6b5117a8eee2d.js",
+    "precache-manifest.9b5ae87d6995ae0148906edc083e6d69.js": "/React-Kamasutra/precache-manifest.9b5ae87d6995ae0148906edc083e6d69.js",
     "service-worker.js": "/React-Kamasutra/service-worker.js",
     "static/css/3.d5c179fe.chunk.css.map": "/React-Kamasutra/static/css/3.d5c179fe.chunk.css.map",
     "static/css/4.9fe74602.chunk.css.map": "/React-Kamasutra/static/css/4.9fe74602.chunk.css.map",
@@ -31,6 +31,6 @@
     "static/js/runtime-main.48833044.js",
     "static/js/2.ea2086b0.chunk.js",
     "static/css/main.76e06dac.chunk.css",
-    "static/js/main.38ee58a0.chunk.js"
+    "static/js/main.d375104e.chunk.js"
   ]
 }
