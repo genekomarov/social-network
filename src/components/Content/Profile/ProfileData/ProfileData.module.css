@@ -1,11 +1,32 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+}
+
 .avatar__img {
     object-fit: cover;
-    width: 100px;
-    height: 100px;
-    float: left;
+    width: 250px;
+    height: 250px;
+    /*float: left;*/
     margin-right: 10px;
 }
 
 .name {
+    margin-bottom: 5px;
+}
+
+.status {
     margin-bottom: 10px;
+}
+
+.aboutMe {
+    margin-bottom: 10px;
+}
+
+.skills {
+    margin-bottom: 10px;
+}
+
+.contact {
+    padding-left: 10px;
 }

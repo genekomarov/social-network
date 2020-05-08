@@ -5,11 +5,6 @@ import News from "./components/Content/News/News";
 import Music from "./components/Content/Music/Music";
 import Settings from "./components/Content/Settings/Settings";
 import {BrowserRouter, HashRouter, Route, withRouter} from "react-router-dom";
-
-/*import DialogsContainer from "./components/Content/Dialogs/DialogsContainer";
-import UsersContainer from "./components/Content/Users/UsersContainer";
-import ProfileContainer from "./components/Content/Profile/ProfileContainer";*/
-
 import HeaderContainer from "./components/Header/HeaderContainer";
 import Login from "./components/Login/Login";
 import {connect, Provider} from "react-redux";

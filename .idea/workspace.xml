@@ -2,9 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="386c3333-db5e-4edd-8a3e-0d2491e22065" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/Content/Profile/ProfileData/ProfileInfoForm/ProfileInfoForm.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Content/Profile/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/Profile/Profile.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Content/Profile/ProfileContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/Profile/ProfileContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Content/Profile/ProfileData/ProfileData.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/Profile/ProfileData/ProfileData.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Content/Profile/ProfileData/ProfileData.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/Profile/ProfileData/ProfileData.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Content/Profile/ProfileStatus/ProfileStatus.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/Profile/ProfileData/ProfileStatus/ProfileStatus.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Content/Profile/ProfileStatus/ProfileStatus.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/Profile/ProfileData/ProfileStatus/ProfileStatus.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Content/Profile/ProfileStatus/ProfileStatusWithHooks.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/Profile/ProfileData/ProfileStatus/ProfileStatusWithHooks.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/profile-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/profile-reducer.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,9 +31,9 @@
         <option value="JSX" />
         <option value="ComponentContainer" />
         <option value="reducer" />
-        <option value="Component JSX" />
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
+        <option value="Component JSX" />
       </list>
     </option>
   </component>
@@ -32,6 +41,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1Zd7HM1FYJQR3aIaMVjWfRPxeM7" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="12.13.0" />
@@ -48,19 +60,19 @@
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.2.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\WEB\2020-03-25_REACT-KAMASUTRA\projects\01-first-project\React-social-network\src\components\common\Paginator" />
-      <recent name="D:\WEB\2020-03-25_REACT-KAMASUTRA\projects\01-first-project\React-social-network\src\components\Content\Dialogs" />
-      <recent name="D:\WEB\2020-03-25_REACT-KAMASUTRA\projects\01-first-project\React-social-network\src\components\Content" />
-      <recent name="D:\WEB\2020-03-25_REACT-KAMASUTRA\projects\01-first-project\React-social-network\src\components\Content\Profile" />
-      <recent name="D:\WEB\2020-03-25_REACT-KAMASUTRA\projects\01-first-project\React-social-network\src\components\Content\Profile\MyPosts" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\WEB\2020-03-25_REACT-KAMASUTRA\projects\01-first-project\React-social-network\src\redux" />
       <recent name="D:\WEB\2020-03-25_REACT-KAMASUTRA\projects\01-first-project\React-social-network\src\components\Content\Profile\ProfileStatus" />
       <recent name="D:\WEB\2020-03-25_REACT-KAMASUTRA\projects\01-first-project\React-social-network\src\components\Content\Users" />
       <recent name="D:\WEB\2020-03-25_REACT-KAMASUTRA\projects\01-first-project\React-social-network\src\components\Content\Dialogs\NewMessage" />
       <recent name="D:\WEB\2020-03-25_REACT-KAMASUTRA\projects\01-first-project\React-social-network\src" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\WEB\2020-03-25_REACT-KAMASUTRA\projects\01-first-project\React-social-network\src\components\Content\Profile\ProfileData" />
+      <recent name="D:\WEB\2020-03-25_REACT-KAMASUTRA\projects\01-first-project\React-social-network\src\components\common\Paginator" />
+      <recent name="D:\WEB\2020-03-25_REACT-KAMASUTRA\projects\01-first-project\React-social-network\src\components\Content\Dialogs" />
+      <recent name="D:\WEB\2020-03-25_REACT-KAMASUTRA\projects\01-first-project\React-social-network\src\components\Content" />
+      <recent name="D:\WEB\2020-03-25_REACT-KAMASUTRA\projects\01-first-project\React-social-network\src\components\Content\Profile" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -139,8 +151,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.start" />
         <item itemvalue="npm.deploy" />
+        <item itemvalue="npm.start" />
         <item itemvalue="Jest.ProfileStatus component" />
         <item itemvalue="Jest.ProfileStatus component.callback should be called" />
         <item itemvalue="Jest.ProfileStatus component.input should be displayed in editMode instead of span" />
@@ -205,6 +217,7 @@
       <workItem from="1588862829438" duration="1717000" />
       <workItem from="1588867677601" duration="1222000" />
       <workItem from="1588869020008" duration="3382000" />
+      <workItem from="1588916450678" duration="25233000" />
     </task>
     <servers />
   </component>
