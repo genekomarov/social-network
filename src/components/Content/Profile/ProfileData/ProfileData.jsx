@@ -19,8 +19,8 @@ const ProfileData = (props) => {
     };
 
     const onProfileInfoSubmit = (formData) => {
-        setEditMode(false);
-        props.saveProfile(formData);
+        /*setEditMode(false);*/
+        props.saveProfile(formData, setEditMode);
     };
 
     return (
@@ -65,7 +65,7 @@ const ProfileInfo = ({profile, ...props}) => {
 const Contacts = (props) => {
     return(
         <div className={s.contact}>
-            <span>{props.contactTitle}: </span><span>{props.contactValue}</span>
+            <span><b>{props.contactTitle}: </b></span><span>{props.contactValue}</span>
         </div>
     )
 };

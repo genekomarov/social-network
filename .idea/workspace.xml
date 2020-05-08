@@ -2,17 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="386c3333-db5e-4edd-8a3e-0d2491e22065" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Content/Profile/ProfileData/ProfileInfoForm/ProfileInfoForm.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Content/Profile/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/Profile/Profile.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Content/Profile/ProfileContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/Profile/ProfileContainer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Content/Profile/ProfileData/ProfileData.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/Profile/ProfileData/ProfileData.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Content/Profile/ProfileData/ProfileData.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/Profile/ProfileData/ProfileData.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Content/Profile/ProfileStatus/ProfileStatus.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/Profile/ProfileData/ProfileStatus/ProfileStatus.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Content/Profile/ProfileStatus/ProfileStatus.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/Profile/ProfileData/ProfileStatus/ProfileStatus.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Content/Profile/ProfileStatus/ProfileStatusWithHooks.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/Profile/ProfileData/ProfileStatus/ProfileStatusWithHooks.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Content/Profile/ProfileData/ProfileInfoForm/ProfileInfoForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/Profile/ProfileData/ProfileInfoForm/ProfileInfoForm.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/profile-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/profile-reducer.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -217,7 +210,7 @@
       <workItem from="1588862829438" duration="1717000" />
       <workItem from="1588867677601" duration="1222000" />
       <workItem from="1588869020008" duration="3382000" />
-      <workItem from="1588916450678" duration="25233000" />
+      <workItem from="1588916450678" duration="27425000" />
     </task>
     <servers />
   </component>

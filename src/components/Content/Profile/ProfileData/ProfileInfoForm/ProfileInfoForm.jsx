@@ -11,6 +11,7 @@ const ProfileInfoForm = (props) => {
             onSubmit={props.handleSubmit}
             className={`${s.description} clearfix`}>
             <div><button>save</button></div>
+            { props.error && <div className={s.formSummaryError}>{props.error}</div> }
             <div className={s.name}>
                 Name:
                 <Field validate={[required]} component={Input} placeholder={'Fullname'} name={'fullName'}/>
