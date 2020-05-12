@@ -28,7 +28,12 @@ const ProfileData = (props) => {
             <div>
                 <img className={s.avatar__img} src={props.profile.photos.large || userPhoto} alt=""/>
                 {props.isOwner && <input type="file" onChange={onMainPhotoSelected}/>}
-                <ProfileStatusWithHooks status={props.status} updateStatus={props.updateStatus}/>
+                <ProfileStatusWithHooks
+                    status={props.status}
+                    updateStatus={props.updateStatus}
+                    isOwner={props.isOwner}
+                    updateStatusError={props.updateStatusError}
+                    isTestError={props.isTestError}/>
             </div>
             {
                 !editMode

@@ -10,7 +10,7 @@ import Login from "./components/Login/Login";
 import {connect, Provider} from "react-redux";
 import {compose} from "redux";
 import Preloader from "./components/common/Preloader/Preloader";
-import {initializeApp} from "./redux/app-reducer";
+import {initializeApp, showErrorForSomeSeconds} from "./redux/app-reducer";
 import store from "./redux/redux-store";
 import withSuspense from "./hoc/withSuspense";
 
@@ -23,6 +23,7 @@ class App extends Component {
 
     catchAllUnhandledErrors = (promiseRejectionEvent) => {
         alert('Some error occured');
+        this.props.showErrorForSomeSeconds('Some error occured');
     };
 
     componentDidMount() {
@@ -65,7 +66,8 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = {
-    initializeApp
+    initializeApp,
+    showErrorForSomeSeconds
 };
 
 let AppContainer = compose(

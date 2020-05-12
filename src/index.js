@@ -15,12 +15,12 @@ let rendererEntireTree = (state) => {
 
 rendererEntireTree(store.getState());
 
-store.subscribe( () => {
+/*store.subscribe( () => {
     let state = store.getState();
     rendererEntireTree(state)
 });
 
-window.state = store.getState;
+window.state = store.getState;*/
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

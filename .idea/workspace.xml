@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="386c3333-db5e-4edd-8a3e-0d2491e22065" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/profile-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/profile-reducer.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,8 +21,8 @@
         <option value="ComponentContainer" />
         <option value="reducer" />
         <option value="JavaScript File" />
-        <option value="CSS File" />
         <option value="Component JSX" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -212,7 +208,9 @@
       <workItem from="1588869020008" duration="3382000" />
       <workItem from="1588916450678" duration="31140000" />
       <workItem from="1588955226161" duration="2474000" />
-      <workItem from="1589002696179" duration="7324000" />
+      <workItem from="1589002696179" duration="7611000" />
+      <workItem from="1589271512827" duration="448000" />
+      <workItem from="1589280361690" duration="10862000" />
     </task>
     <servers />
   </component>
@@ -231,5 +229,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/node_modules/redux-form/es/Field.js</url>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

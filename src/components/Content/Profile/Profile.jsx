@@ -21,6 +21,8 @@ const Profile = (props) => {
                 updateStatus={props.updateStatus}
                 savePhoto={props.savePhoto}
                 saveProfile={props.saveProfile}
+                updateStatusError={props.updateStatusError}
+                isTestError={props.isTestError}
             />
             {/*<ProfileStatusWithHooks status={props.status} updateStatus={props.updateStatus}/>*/}
             <MyPostsContainer />

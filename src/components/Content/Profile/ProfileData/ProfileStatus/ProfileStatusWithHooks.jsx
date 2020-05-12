@@ -1,10 +1,7 @@
 import React, {useEffect, useState} from 'react';
+import s from './ProfileStatus.module.css';
 
 const ProfileStatusWithHooks = (props) => {
-
-    /*let stateWithSetState = useState(false);
-    let editMode = stateWithSetState[0];
-    let setEditMode = stateWithSetState[1];*/
 
     let [editMode, setEditMode] = useState(false); //деструктурирующее присваивание
     let [status, setStatus] = useState(props.status);
@@ -14,12 +11,12 @@ const ProfileStatusWithHooks = (props) => {
     }, [props.status]);
 
     const activateEditMode = () => {
-        setEditMode(true);
+        props.isOwner && setEditMode(true);
     };
 
     const deactivateEditMode = () => {
         setEditMode(false);
-        props.updateStatus(status);
+        props.updateStatus(status, props.isTestError);
     };
 
     const onStatusChange = (e) => {
@@ -28,7 +25,8 @@ const ProfileStatusWithHooks = (props) => {
 
 
     return (
-        <div>
+        <div className={s.wrapper}>
+            status:
             {!editMode &&
             <div>
                 <span onDoubleClick={activateEditMode}>{props.status || '-----'}</span>
@@ -40,6 +38,9 @@ const ProfileStatusWithHooks = (props) => {
                     value={status}
                     onChange={onStatusChange} onBlur={deactivateEditMode} autoFocus={true} />
             </div>
+            }
+            {props.updateStatusError &&
+                <div className={s.error}>{props.updateStatusError}</div>
             }
         </div>
     );

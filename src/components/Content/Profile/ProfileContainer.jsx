@@ -31,7 +31,9 @@ let mapStateToProps = (state) => ({
     profile: state.profilePage.profile,
     status: state.profilePage.status,
     myId: state.auth.id,
-    isAuth: state.auth.isAuth
+    isAuth: state.auth.isAuth,
+    updateStatusError: state.profilePage.updateStatusError,
+    isTestError: state.profilePage.isTestError
 });
 
 let mapDispatchToProps = {

@@ -2,7 +2,7 @@ import {authAPI, securityAPI} from "../api/api";
 import {stopSubmit} from 'redux-form';
 
 const SET_USER_DATA = 'auth/SET-USER-DATA';
-const SET_CAPTCHA_URL = 'SET_CAPTCHA_URL';
+const SET_CAPTCHA_URL = 'auth/SET_CAPTCHA_URL';
 
 let initialState = {
     id: 7252,  //идентификатор пользователя

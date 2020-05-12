@@ -1,11 +1,12 @@
 import {profileAPI, usersAPI} from "../api/api";
 import {stopSubmit} from "redux-form";
 
-const ADD_POST = 'ADD-POST';
-const SET_USER_PROFILE = 'SET-USER-PROFILE';
-const SET_STATUS = 'SET_STATUS';
-const SAVE_PHOTO_SUCCESS = 'SAVE_PHOTO_SUCCESS';
-const SAVE_PROFILE_SUCCESS = 'SAVE_PROFILE_SUCCESS';
+const ADD_POST = 'profile/ADD-POST';
+const SET_USER_PROFILE = 'profile/SET-USER-PROFILE';
+const SET_STATUS = 'profile/SET_STATUS';
+const SAVE_PHOTO_SUCCESS = 'profile/SAVE_PHOTO_SUCCESS';
+const SAVE_PROFILE_SUCCESS = 'profile/SAVE_PROFILE_SUCCESS';
+const SET_UPDATE_STATUS_ERROR = 'profile/SET_UPDATE_STATUS_ERROR'
 
 let initialState = {
     posts: [
@@ -13,7 +14,9 @@ let initialState = {
         {id: 1, post: 'it\'s my first post.', likes: 0}
     ],
     profile: null,
-    status: ""
+    status: "",
+    updateStatusError: null,
+    isTestError: true
 };
 
 const profileReducer = (state = initialState, action) => {
@@ -42,16 +45,19 @@ const profileReducer = (state = initialState, action) => {
                 }
             };
         case SAVE_PROFILE_SUCCESS:
-
-            let newState =  {
+            return  {
                 ...state,
                 profile:  {
                     ...state.profile,
                     ...action.profile
                 }
             };
-            return newState;
-
+        case SET_UPDATE_STATUS_ERROR:
+            return {
+                ...state,
+                updateStatusError: action.error,
+                isTestError: false
+            };
         default: return state;
     }
 };
@@ -84,6 +90,11 @@ export const saveProfileSuccess = (profile) => ({
     profile
 });
 
+export const setUpdateStatusError = (error) => ({
+    type: SET_UPDATE_STATUS_ERROR,
+    error
+});
+
 export const getUserProfile = (userId) => async (dispatch) => {
     let response = await usersAPI.getUserProfile(userId);
     dispatch(setUserProfile(response));
@@ -94,13 +105,17 @@ export const getStatus = (userId) => async (dispatch) => {
     dispatch(setStatus(response));
 };
 
-export const updateStatus = (status) => async (dispatch) => {
+export const updateStatus = (status, isTestError) => async (dispatch) => {
     try {
         let response = await profileAPI.updateStatus(status);
         if (response.resultCode === 0)
             dispatch(setStatus(status));
+
+        if (isTestError) throw 'TEST update status error';
+
     } catch (e) {
-        alert('Update Status Error');
+        dispatch(setUpdateStatusError(e));
+        setTimeout(() => dispatch(setUpdateStatusError(null)), 3000)
     }
 
 };
