@@ -1,5 +1,7 @@
 import {profileAPI, usersAPI} from "../api/api";
-import {stopSubmit} from "redux-form";
+import {FormAction, stopSubmit} from "redux-form";
+import {ThunkAction} from "redux-thunk"
+import {AppStateType} from "./redux-store"
 
 const ADD_POST = 'profile/ADD-POST';
 const SET_USER_PROFILE = 'profile/SET-USER-PROFILE';
@@ -32,7 +34,7 @@ let initialState: InitialStateType = {
     newPostText: ''
 };
 
-const profileReducer = (state = initialState, action: any): InitialStateType => {
+const profileReducer = (state = initialState, action: ActionsType): InitialStateType => {
 
     switch (action.type) {
         case ADD_POST:
@@ -74,6 +76,9 @@ const profileReducer = (state = initialState, action: any): InitialStateType => 
         default: return state;
     }
 };
+
+type ActionsType = AddPostActionCreatorType | SetUserProfileType | SetStatusActionType
+    | SavePhotoSuccessActionType | SaveProfileSuccessActionType | SetUpdateStatusErrorActionType
 
 type AddPostActionCreatorType = {
     type: typeof ADD_POST
@@ -129,18 +134,19 @@ export const setUpdateStatusError = (error: string | null): SetUpdateStatusError
     error
 });
 
+type ThunkType = ThunkAction<Promise<void>, AppStateType, unknown, ActionsType>
 
-export const getUserProfile = (userId: number) => async (dispatch: any) => {
+export const getUserProfile = (userId: number): ThunkType => async (dispatch) => {
     let response = await usersAPI.getUserProfile(userId);
     dispatch(setUserProfile(response));
 };
 
-export const getStatus = (userId: number) => async (dispatch: any) => {
+export const getStatus = (userId: number): ThunkType => async (dispatch) => {
     let response = await profileAPI.getStatus(userId);
     dispatch(setStatus(response));
 };
 
-export const updateStatus = (status: string, isTestError: boolean) => async (dispatch: any) => {
+export const updateStatus = (status: string, isTestError: boolean): ThunkType => async (dispatch) => {
     try {
         let response = await profileAPI.updateStatus(status);
         if (response.resultCode === 0)
@@ -155,18 +161,20 @@ export const updateStatus = (status: string, isTestError: boolean) => async (dis
 
 };
 
-export const savePhoto = (file: any) => async (dispatch: any) => {
+export const savePhoto = (file: any): ThunkType => async (dispatch) => {
     let response = await profileAPI.savePhoto(file);
     if (response.resultCode === 0)
         dispatch(savePhotoSuccess(response.data.photos))
 };
 
-export const saveProfile = (profile: any, setEditMode: any) => async (dispatch: any) => {
+export const saveProfile = (profile: any, setEditMode: any): ThunkType => async (dispatch: any) => {
     let data = await profileAPI.saveProfile(profile);
     if (data.resultCode === 0) {
         dispatch(saveProfileSuccess(profile));
         setEditMode(false);
     } else
+        /** ПРОБЛЕМА при назначении типа ThunkType
+         * Временно решено "dispatch: any" */
         dispatch(stopSubmit('profileInfo', {_error: data.messages.length > 0 ? data.messages[0] : 'Some error'}));
 
 };

@@ -1,16 +1,18 @@
 import {authCheck} from "./auth-reducer"
+import {ThunkAction} from "redux-thunk"
+import {AppStateType} from "./redux-store"
 
 const INITIALIZED_SUCCESS = 'app/INITIALIZED_SUCCESS';
 const SHOW_ERROR = 'app/SHOW_ERROR';
 
 let initialState = {
     initialized: false,
-    errorMessage: null
+    errorMessage: null as string | null
 };
 
 type InitialStateType = typeof initialState
 
-const appReducer = (state = initialState, action: any): InitialStateType => {
+const appReducer = (state = initialState, action: ActionsType): InitialStateType => {
     switch (action.type) {
         case INITIALIZED_SUCCESS:
             return {
@@ -26,6 +28,8 @@ const appReducer = (state = initialState, action: any): InitialStateType => {
             return state;
     }
 };
+
+type ActionsType = initializedSuccessActionType | ShowErrorActionType
 
 type initializedSuccessActionType = {
     type: typeof INITIALIZED_SUCCESS
@@ -45,7 +49,9 @@ export const showError = (error: string | null): ShowErrorActionType =>
         error
     });
 
-export const initializeApp = () => (dispatch: any) => {
+type ThunkType = ThunkAction<Promise<void>, AppStateType, unknown, ActionsType>
+
+export const initializeApp = (): ThunkType => async (dispatch) => {
     let promise = dispatch(authCheck());
 
     Promise.all([promise])
@@ -54,7 +60,7 @@ export const initializeApp = () => (dispatch: any) => {
         });
 };
 
-export const showErrorForSomeSeconds = (message: string) => (dispatch: any) => {
+export const showErrorForSomeSeconds = (message: string): ThunkType => async (dispatch) => {
     dispatch(showError(message));
     setTimeout(() => {dispatch(showError(null));},5000);
 };

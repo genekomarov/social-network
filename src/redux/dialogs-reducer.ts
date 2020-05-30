@@ -29,7 +29,8 @@ let initialState: InitialStateType = {
     newMessageText: ''
 };
 
-const dialogsReducer = (state = initialState, action: any): InitialStateType => {
+
+const dialogsReducer = (state = initialState, action: ActionsType): InitialStateType => {
     switch (action.type) {
         case ADD_MESSAGE:
             let text = action.message;
@@ -42,6 +43,7 @@ const dialogsReducer = (state = initialState, action: any): InitialStateType => 
     }
 };
 
+type ActionsType = AddMessageTextCreatorType
 
 type AddMessageTextCreatorType = {
     type: typeof ADD_MESSAGE
