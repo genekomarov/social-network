@@ -1,4 +1,4 @@
-import {authAPI, securityAPI} from "../api/api";
+import {authAPI, ResultCodesEnum, securityAPI, ResultCodeWithCaptcha} from "../api/api";
 import {stopSubmit} from 'redux-form';
 import {ThunkAction} from "redux-thunk"
 import {AppStateType} from "./redux-store"
@@ -72,7 +72,7 @@ type ThunkType = ThunkAction<Promise<void>, AppStateType, unknown, ActionsType>
 export const authCheck = (): ThunkType => async (dispatch) => {
     let data = await authAPI.authCheck();
 
-    if (data.resultCode === 0) {
+    if (data.resultCode === ResultCodesEnum.Success) {
         let {id, email, login} = data.data;
         dispatch(setAuthUserData(id, email, login, true));
     }
@@ -86,10 +86,10 @@ export const login = (
 ): ThunkType => async (dispatch: any) => {
     let data = await authAPI.login(email, password, rememberMe, captcha);
 
-    if (data.resultCode === 0) {
+    if (data.resultCode === ResultCodesEnum.Success) {
         dispatch(authCheck());
         setCaptchaUrl(null);
-    } else if (data.resultCode === 10) {
+    } else if (data.resultCode === ResultCodeWithCaptcha.CaptchaIsRequired) {
         dispatch(getCaptcha());
     } else {
         /** ПРОБЛЕМА при назначении типа ThunkType
@@ -101,7 +101,7 @@ export const login = (
 export const logout = (): ThunkType => async (dispatch) => {
     let data = await authAPI.logout();
 
-    if (data.resultCode === 0) {
+    if (data.resultCode === ResultCodesEnum.Success) {
         dispatch(authCheck());
         dispatch(setAuthUserData(null, null, null, false));
     }
