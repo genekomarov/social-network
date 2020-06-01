@@ -67,7 +67,7 @@ export const setCaptchaUrl = (url: string | null): SetCaptchaUrlActionType =>
         url
     });
 
-type ThunkType = ThunkAction<Promise<void>, AppStateType, unknown, ActionsType>
+export type ThunkType = ThunkAction<Promise<void>, AppStateType, unknown, ActionsType>
 
 export const authCheck = (): ThunkType => async (dispatch) => {
     let data = await authAPI.authCheck();
@@ -77,6 +77,8 @@ export const authCheck = (): ThunkType => async (dispatch) => {
         dispatch(setAuthUserData(id, email, login, true));
     }
 };
+
+
 
 export const login = (
     email: string,
@@ -98,6 +100,8 @@ export const login = (
     }
 };
 
+export type LoginType = typeof login
+
 export const logout = (): ThunkType => async (dispatch) => {
     let data = await authAPI.logout();
 
@@ -111,6 +115,8 @@ export const getCaptcha = (): ThunkType => async (dispatch) => {
     let data = await securityAPI.getCaptcha();
     dispatch(setCaptchaUrl(data.url));
 };
+
+export type GetCaptchaType = typeof getCaptcha
 
 
 
