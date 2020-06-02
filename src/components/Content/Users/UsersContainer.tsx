@@ -2,7 +2,7 @@ import {connect} from "react-redux";
 import {
     follow,
     setCurrentPage,
-    unfollow, toggleFollowing, requestUsers
+    unfollow, requestUsers
 } from "../../../redux/users-reducer";
 import React from "react";
 import Users from "./Users";
@@ -70,8 +70,6 @@ class UsersContainer extends React.Component<PropsType> {
                 unfollow={this.props.unfollow}
                 onPageChanged={this.onPageChanged}
                 isFollowing={this.props.isFollowing}
-
-                /*toggleFollowing={this.props.toggleFollowing}*/
             />
             )
     }
@@ -93,7 +91,6 @@ let mapDispatchToProps: MapDispatchPropsType = {
     follow,
     unfollow,
     setCurrentPage,
-    /*toggleFollowing,*/
     requestUsers
 };
 
